@@ -1,3 +1,6 @@
+*{
+    font-family: "Lucida Console";
+}
 body, html{
     height: 100%;
     margin: 0px;
@@ -25,12 +28,12 @@ nav{
 }
 
 nav a{
-    color:#5555;
+    color:rgba(85, 85, 85, 0.333);
     text-decoration:none
 }
 
 nav a:hover{
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .hero-image{
@@ -40,29 +43,46 @@ nav a:hover{
     background-size: cover;
     background-position:center ;
     position:relative;
+    flex-basis: 40%;
+    align-self:center;
+    flex-wrap:wrap;
 
 }
+
+
+
+
 .hero-text{
-    color: green;
+    color: rgb(120, 226, 120);
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Lucida Console";
-    -webkit-text-stroke:2px black;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke:2px rgb(28, 88, 28);
 }
 
-
 #main{
-    width: 75%;
+    display: flex;
+    gap:35px;
+    width: 60%;
     float: left;
     height: 100%;
     padding-left:20px;
     padding-top:20px;
-    
+    flex-basis: 50%;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items:center;
+    align-items: flex-end;
+    justify-content: center;
+    flex-flow:row wrap;
+    column-gap: 10px
 }
-
 
 #side{
     width: 20%;
@@ -73,7 +93,7 @@ nav a:hover{
 
 #profile-image{
     width:100px;
-    border: 5px solid rgb(100, 47, 143);
+    border: 5px solid rgb(133, 208, 226);
 }
 #profile{
     text-align: center;
@@ -94,18 +114,21 @@ nav a:hover{
 
 
 #side-articles, #main-articles{
-    padding: 10px;
+    padding: 30px;
     margin-bottom: 10px;
     border-radius: 10px; ;
 }
-.side-articles{
-    background-color: rgb(225, 197, 241);
-    text-align: center;
-}
 .main-articles{
-
+    display:flex;
     background:rgb(83, 161, 151);
     border-radius: 10px;
+    border: rgb(193, 161, 235) solid 2px;
+    height: 30vw;
+    padding: 50px;
+    gap: 10px;
+    gap: 10px 20px; 
+    row-gap: 10px;
+
 }
 
 form{
@@ -120,16 +143,14 @@ textarea, input{
 
 }
 
-.side-articles h1{
-    margin-bottom: 20px;
-
-}
-
 footer{
     width: 100%;
-    background-color: black;
+    background-color: rgb(83, 56, 78);
     height: 5vh;
     margin-top: 0px;
+    position:sticky;
+    top:0;
+    position: -webkit-sticky;
 }
 footer div{
     text-align:center;
@@ -151,15 +172,60 @@ footer hr{
 h1{
     text-align: center;
 }
-.laikaimg{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+
+.jpeg{
+    display:flex;
+    border: rgb(129, 95, 160) solid 2px;
+    border-radius: 5px;
+    height:20vw;
+    justify-content:left;
 }
-.bike{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+.texts{
+    gap: 10px 20px;
+    margin-top: 15;
+    border:3px solid rgb(241, 231, 231);
+    flex-grow:2;
+    flex-shrink:1;
+    border-radius:5px ;
+    overflow:auto;
+}
+
+
+.side{
+    display:flex;
+    flex-direction:column;
+    position: absolute;
+    border:dashed;
+
+}
+
+
+.side-articles{
+    align-content: stretch;
+    background-color: rgb(208, 176, 226);
+    text-align: center;
+    margin-bottom: 20px;
+    border:dashed;
+    border-radius: 15px;
+
+}
+
+.side-jpeg{
+    position:relative;
+    border-radius: 50%;
+
+
+}
+   
+.major{
+    justify-content: space-around;
+    
+}
+
+.linky{
+    flex-grow:3;
+}
+
+.h1{
+    border:black;
 }
